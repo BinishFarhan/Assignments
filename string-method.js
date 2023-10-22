@@ -120,7 +120,49 @@
 // }
 
 //Q20
+// var num = "binish"
+// var char = num.slice(0,1).charCodeAt()
+// console.log("🚀 ~ file: string-method.js:125 ~ char:", char)
 
+// if(char >! 48 || char <! 57){
+//     console.log('ok')
+// }
+
+var pass = prompt('enter password')
+var speChar = false
+var numAtStart = false
+document.write(`Enter Password : ${pass}<br>`)
+if (pass.length > 6) {
+    for (let i = 0; i < pass.length; i++) {
+        var char = pass[i].charCodeAt()
+        if (!((char >= 65 && char <= 90) || (char >= 97 && char <= 122) || (char >= 48 && char <= 57))) {
+            speChar = true
+        }
+        if (!(speChar)) {
+            var char1 = pass.slice(0, 1).charCodeAt()
+            if (char1 >= 48 && char1 <= 57) {
+                numAtStart = true
+            }
+
+        }
+    }
+
+} else {
+    document.write(`Please enter atleast six characters <br>`)
+}
+if (true) {
+    if (speChar) {
+        document.write(`Special characters are not allowed <br> `)
+    }
+    if (numAtStart) {
+        document.write(`Password can not begin with a number <br> `)
+    }
+    
+    
+}
+if (!(speChar) && !(numAtStart)) {
+    document.write('Strong Password')
+}
 
 //Q21 //Q22
 // var str = "Binish Farooq"
@@ -145,8 +187,8 @@
 // console.log("Text:", str)
 // console.log(`There are ${res} occurences of the word '${wordToSearch}'`)
 
-// //Q24
-// var cntry = "BRA4354WN"
+//Q24
+// var cntry = "Pakistan"
 // var len = cntry.length
 // var vowels = " "
 // var consonants = " "
@@ -163,8 +205,8 @@
 //     }
 // }
 
-// console.log(consonants)
-// console.log(vowels)
+// console.log("consonants ===> "+consonants)
+// console.log("vowels ===> " + vowels)
 
 
 // var grid = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
@@ -221,7 +263,7 @@
 
 
 // var arr = [23 ,45 , 67, 12, 89,100];
-// var minNum = arr[0] // 23 
+// var minNum = arr[0] // 23
 // for(let i = 0; i < arr.length; i++){
 //     if(arr[i] < minNum){
 //         minNum = arr[i]
@@ -235,14 +277,12 @@
 // var students = ["Ali", "Sami", "Taha", "Inam"];
 // var scores = [58, 73, 89, 90];
 
-// for(let i = 0; i < students.length; i++){ 
-//     for(let j = 0 ; j < scores.length; j++){  
+// for(let i = 0; i < students.length; i++){
+//     for(let j = 0 ; j < scores.length; j++){
 //         conso
 //     }
 // }
 
-var uI = prompt('enter a number')
-var sum = "22" - 2
-console.log("🚀 ~ file: string-method.js:246 ~ sum:", sum)
-
-
+// // var uI = prompt('enter a number')
+// // var sum = "22" - 2
+// console.log("🚀 ~ file: string-method.js:246 ~ sum:", sum)

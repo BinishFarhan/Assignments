@@ -4,8 +4,8 @@
 // var fullName = firstName + " " + lastName
 // console.log("🚀 ~ file: string-method.js:5 ~ fullName:", fullName)
 // console.log(firstName.concat(` ${lastName}`))
-// //Q2
 
+// //Q2
 // // var userInp = prompt('Enter you favourite mobile phone model');
 // // console.log(`My fv8 phone is ${userInp}`)
 // // console.log(`length of string is : ${userInp.length}`)
@@ -70,11 +70,16 @@
 
 //Q14
 
-// var num = 35.36
+// var num = 8798798.4565
 // var toStr = num.toString()
+// var rep = toStr.replaceAll("." , "")
+// console.log("🚀 ~ file: string-method.js:76 ~ rep:", rep)
+// console.log("🚀 ~ file: string-method.js:75 ~ toStr:", toStr)
 // var rdec = toStr.slice(0,2) + toStr.slice(3)
 // console.log("Number:", toStr)
 // console.log("Result:", rdec)
+
+
 
 //Q15 //Q16
 // var a = "3";  b = "3";
@@ -119,50 +124,95 @@
 //     alert("Both are equal")
 // }
 
-//Q20
-// var num = "binish"
-// var char = num.slice(0,1).charCodeAt()
-// console.log("🚀 ~ file: string-method.js:125 ~ char:", char)
-
-// if(char >! 48 || char <! 57){
-//     console.log('ok')
+// //Q20
+// var pass = prompt('enter password')
+// var speChar = false
+// var numAtStart = false
+// document.write(`Enter Password : ${pass}<br>`)
+// if (pass.length >= 6) {
+//     for (let i = 0; i < pass.length; i++) {
+//         var char = pass[i].charCodeAt()
+//         if (!((char >= 65 && char <= 90) || (char >= 97 && char <= 122) || (char >= 48 && char <= 57))) {
+//             speChar = true
+//         }
+//         if (!(speChar)) {
+//             var char1 = pass.slice(0, 1).charCodeAt()
+//             if (char1 >= 48 && char1 <= 57) {
+//                 numAtStart = true
+//             }
+//         }
+//     }
+//     if (speChar) {
+//             document.write(`Special characters are not allowed <br> `)
+//         }
+//     if (numAtStart) {
+//             document.write(`Password can not begin with a number <br> `)
+//         }
+//     if (!(speChar) && !(numAtStart)) {
+//         document.write('Strong Password')
+//     }else{
+//         document.write('Please enter a valid password')
+//     }
+// } else {
+//     document.write(`Please enter atleast six characters <br>`)
 // }
 
-var pass = prompt('enter password')
-var speChar = false
-var numAtStart = false
-document.write(`Enter Password : ${pass}<br>`)
-if (pass.length > 6) {
-    for (let i = 0; i < pass.length; i++) {
-        var char = pass[i].charCodeAt()
-        if (!((char >= 65 && char <= 90) || (char >= 97 && char <= 122) || (char >= 48 && char <= 57))) {
-            speChar = true
-        }
-        if (!(speChar)) {
-            var char1 = pass.slice(0, 1).charCodeAt()
-            if (char1 >= 48 && char1 <= 57) {
-                numAtStart = true
-            }
 
-        }
-    }
 
-} else {
-    document.write(`Please enter atleast six characters <br>`)
-}
-if (true) {
-    if (speChar) {
-        document.write(`Special characters are not allowed <br> `)
-    }
-    if (numAtStart) {
-        document.write(`Password can not begin with a number <br> `)
-    }
-    
-    
-}
-if (!(speChar) && !(numAtStart)) {
-    document.write('Strong Password')
-}
+
+// Q20 // for password must contain alphabets and numbers.
+// var pass = prompt('enter password')
+// var alpha = ""
+// var num = ""
+// var numAtStart = false
+// var validPass = true
+// console.log(`Enter Password : ${pass}`)
+// if (pass.length >= 6) {
+//     for (let i = 0; i < pass.length; i++) {
+//         var char = pass[i].charCodeAt()
+//         if ((char >= 65 && char <= 90) || (char >= 97 && char <= 122) ) {
+//             // console.log(pass[i])
+//             alpha += pass[i]
+//         }
+//         if((char >= 48 && char <= 57)){
+//             // console.log(pass[i])
+//             num += pass[i]
+//             var char1 = pass.slice(0, 1).charCodeAt()
+//             if (char1 >= 48 && char1 <= 57) {
+//                 numAtStart = true
+//             }
+            
+//         }
+//     }
+
+// }else{
+//     console.log('Password must contain six character' )
+// }
+
+
+// // console.log(alpha)
+// console.log(num)
+// if(numAtStart){
+//     console.log('Password can not begin with a number')
+//    validPass = false
+// }
+
+// if(!(alpha && num)){
+//     console.log('password must contain alphabets and numbers ' )
+//      validPass = false
+// }
+
+
+// if(validPass){
+//     console.log('Strong Password ')
+// }
+// if(!(validPass)){
+//     // alert('Password is not valid')
+//     console.log('Password is not valid')
+//     // document.write('Password is not valid')
+// }
+
+
 
 //Q21 //Q22
 // var str = "Binish Farooq"
@@ -174,7 +224,7 @@ if (!(speChar) && !(numAtStart)) {
 // // }
 
 // //Q23 to count the occurence of any word in a text.
-// var str = "The quick brown fox jumps over the lazy dog"
+var str = "The quick brown fox jumps over the lazy dog"
 // var wordToSearch = "the"
 // var len = wordToSearch.length
 // var res = " "
@@ -186,6 +236,19 @@ if (!(speChar) && !(numAtStart)) {
 
 // console.log("Text:", str)
 // console.log(`There are ${res} occurences of the word '${wordToSearch}'`)
+
+// ===== by count method =====
+// var strLower = str.toLowerCase()
+// var word = "the"
+// var count = 0
+// for(let i =0; i < strLower.length; i++){
+//     if(strLower.slice(i, i+ word.length) === word){
+//         console.log('done')
+//         count++
+//     }
+// }
+
+// console.log(`there are ${count} occurences of the word ${word}`)
 
 //Q24
 // var cntry = "Pakistan"
@@ -207,82 +270,3 @@ if (!(speChar) && !(numAtStart)) {
 
 // console.log("consonants ===> "+consonants)
 // console.log("vowels ===> " + vowels)
-
-
-// var grid = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
-// for (var i = 0; i < grid.length; i++) {
-//     for (var j = 0; j < grid[i].length; j++) {
-//         console.log(grid[i][j]);
-//     }
-// }
-
-// var array1 = [1, 2];
-// var array2 = ['a', 'b'];
-// for (var i = 0; i < array1.length; i++) {
-//     for (var j = 0; j < array2.length; j++) {
-//         console.log(array1[i] + array2[j]);
-// //     }
-// // }
-
-
-// for (var i = 1; i <= 4; i++) {
-//     // Create an empty string for the current row
-//     var rowPattern = "";
-//     // console.log(i)
-
-//     // Use an inner loop to generate the numbers in the current row
-//     for (var j = 1; j <= i; j++) {
-//         // Append the current number to the rowPattern
-//         rowPattern += j + " "
-//     }
-
-//     // // Display the rowPattern for the current row
-//     console.log(rowPattern);
-// }
-
-
-// // Call the function with the number of rows you want in the pattern
-// createNumberPattern(5); // You can change the argument to create patterns with different numbers of rows
-
-
-
-// var arr = ["sun" , "mon" , "tues"];
-// var uI = prompt('Enter your birthday');
-// var flag = "yes"
-
-// for(let i = 0; i < arr.length; i++){
-//     if(uI === arr[i]){
-//         flag = "no"
-//         console.log("Youe birthday is in our data")
-//         break;
-//     }
-// }
-// if(flag === "yes"){
-//     console.log('no day')
-// }
-
-
-// var arr = [23 ,45 , 67, 12, 89,100];
-// var minNum = arr[0] // 23
-// for(let i = 0; i < arr.length; i++){
-//     if(arr[i] < minNum){
-//         minNum = arr[i]
-//     }
-
-// }
-// console.log(minNum)
-
-
-
-// var students = ["Ali", "Sami", "Taha", "Inam"];
-// var scores = [58, 73, 89, 90];
-
-// for(let i = 0; i < students.length; i++){
-//     for(let j = 0 ; j < scores.length; j++){
-//         conso
-//     }
-// }
-
-// // var uI = prompt('enter a number')
-// // var sum = "22" - 2
-// console.log("🚀 ~ file: string-method.js:246 ~ sum:", sum)
